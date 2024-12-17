@@ -5,7 +5,7 @@ const characters = [
     { img: "images/character3.png", descriptionImg: "images/description3.png" }
 ];
 
-let currentIndex = 0; // Keeps track of the current character
+let currentIndex = 0; 
 
 // DOM Elements
 const characterImg = document.getElementById("characterImg");
