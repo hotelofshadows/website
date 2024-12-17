@@ -12,6 +12,20 @@
     font-style: normal;
 }
 
+/* Small Text Styling */
+.character-text-container {
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds spacing above */
+}
+
+.character-text {
+    font-family: 'OSP-DIN', sans-serif; /* Replace with your custom font */
+    font-size: 1rem; /* Adjust the size */
+    color: #ffffff; /* White text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow for visibility */
+    opacity: 0.8; /* Slight transparency */
+}
+
 body {
     font-family: 'OSP-DIN', sans-serif;
     color: white;
