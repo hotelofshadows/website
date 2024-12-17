@@ -5,8 +5,15 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'OSP-DIN';
+    src: url('/fonts/OSP-DIN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'OSP-DIN', sans-serif;
     color: white;
     height: 100%; /* Ensures the full height of the page is utilized */
     overflow-x: hidden; /* Prevents horizontal scrolling */
@@ -55,7 +62,7 @@ nav ul {
 nav li a {
     text-decoration: none;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     color: #ffffff; /* White text */
     text-transform: uppercase;
     padding: 10px 20px; /* Adds spacing around text */
