@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background"></div>
+
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="Danganronpa Hotel of Shadows" class="logo">
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Characters</a></li>
+            <li><a href="#">Socials</a></li>
+        </ul>
+    </nav>
+
+    <!-- Character Showcase -->
+    <div class="character-container">
+        <!-- Previous Button -->
+        <button id="prevBtn" class="nav-arrow-button">&lt;</button>
+
+        <div class="character-content">
+            <!-- Gradient Image (Static Background Behind Everything) -->
+            <img id="gradientImg" src="images/gradient.png" alt="Gradient Background" class="gradient-img">
+        
+            <!-- Character Image (Fades in/out) -->
+            <div id="characterImgContainer" class="character-img-container">
+                <img id="characterImg" src="" alt="Character Image" class="character-img">
+            </div>
+        
+            <!-- Template Image -->
+            <img src="images/template.png" alt="Character Template" class="template-img">
+        
+            <!-- Overlay for Character Description Image -->
+            <div id="characterOverlay" class="character-overlay">
+                <img id="characterDescriptionImg" src="" alt="Character Description Image" class="character-description-img">
+            </div>
+        </div>
+        
+        
+
+        <!-- Next Button -->
+        <button id="nextBtn" class="nav-arrow-button">&gt;</button>
+    </div>
+
+    <!-- Scrollable Space Below the Character Showcase -->
+    <div class="scrollable-space"></div> <!-- This div can be used for scrollable space or margin adjustments -->
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
