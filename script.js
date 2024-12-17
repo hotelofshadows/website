@@ -2,7 +2,8 @@
 const characters = [
     { img: "images/character1.png", descriptionImg: "images/description1.png" },
     { img: "images/character2.png", descriptionImg: "images/description2.png" },
-    { img: "images/character3.png", descriptionImg: "images/description3.png" }
+    { img: "images/character3.png", descriptionImg: "images/description3.png" },
+    { img: "images/character_placeholder.png", descriptionImg: "images/description_placeholder.png" }
 ];
 
 let currentIndex = 0; 
