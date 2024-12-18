@@ -86,7 +86,7 @@ nav li a {
 
 /* Hover Effects */
 nav li a:hover {
-    color: #ff0044; /* Red hover color (Danganronpa theme) */
+    color: #A53C67; /* Red hover color (Danganronpa theme) */
     transform: scale(1.1); /* Slight zoom effect */
 }
 
@@ -98,7 +98,7 @@ nav li a::after {
     left: 50%;
     width: 0;
     height: 3px;
-    background-color: #ff0044; /* Red underline */
+    background-color: #A53C67; /* Red underline */
     transition: width 0.3s ease, left 0.3s ease;
 }
 
