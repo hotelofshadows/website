@@ -249,3 +249,33 @@ nav li a:hover::after {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+
+/* Line below the logo */
+.logo-divider {
+    width: 80%;
+    height: 2px;
+    background-color: #000; 
+    margin: 20px auto; /* Adds space around the line */
+    border: none;
+}
+
+/* Error message styles */
+.error-container {
+    text-align: center;
+}
+
+.error-title {
+    font-size: 5rem; /* Large font size for 404 */
+    font-weight: bold;
+    margin: 0; /* Optional: Danganronpa pink-ish color */
+}
+
+.error-message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.smiley {
+    font-size: 1rem;
+    margin-top: 10px;
+}
