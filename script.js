@@ -1,10 +1,40 @@
 // Character Data
 const characters = [
-    { img: "images/character1.png", descriptionImg: "images/description1.png" },
-    //{ img: "images/character2.png", descriptionImg: "images/description2.png" },
-    { img: "images/character3.png", descriptionImg: "images/description3.png" },
-    { img: "images/character4.png", descriptionImg: "images/description4.png" },
-    { img: "images/character_placeholder.png", descriptionImg: "images/description_placeholder.png" }
+    { 
+        img: "images/character1.png", 
+        descriptionImg: "images/description1.png", 
+        splashArt: "images/splashArts/1.png" 
+    },
+    { 
+        img: "images/character3.png", 
+        descriptionImg: "images/description3.png", 
+        splashArt: "images/splashArts/3.png" 
+    },
+    { 
+        img: "images/character4.png", 
+        descriptionImg: "images/description4.png", 
+        splashArt: "images/splashArts/4.png" 
+    },
+    { 
+        img: "images/character5.png", 
+        descriptionImg: "images/description5.png", 
+        splashArt: "images/splashArts/5.png" 
+    },
+    { 
+        img: "images/character6.png", 
+        descriptionImg: "images/description6.png", 
+        splashArt: "images/splashArts/6.png" 
+    },
+    { 
+        img: "images/character7.png", 
+        descriptionImg: "images/description7.png", 
+        splashArt: "images/splashArts/7.png" 
+    },
+    { 
+        img: "images/character_placeholder.png", 
+        descriptionImg: "images/description_placeholder.png", 
+        splashArt: "images/splashArts/placeholder_splash.png" 
+    }
 ];
 
 let currentIndex = 0; 
@@ -13,6 +43,10 @@ let currentIndex = 0;
 const characterImg = document.getElementById("characterImg");
 const characterDescriptionImg = document.getElementById("characterDescriptionImg");
 const characterOverlay = document.getElementById("characterOverlay");
+const viewSplashArtBtn = document.getElementById('viewSplashArtBtn');
+const splashArtOverlay = document.getElementById('splashArtOverlay');
+const closeSplashArtBtn = document.getElementById('closeSplashArtBtn');
+const splashArtImg = document.getElementById('splashArtImg');
 
 // Function to Update Character with Fade Effect
 function updateCharacter(index) {
@@ -45,5 +79,21 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     updateCharacter(currentIndex);
 });
 
+// Show Splash Art Overlay
+viewSplashArtBtn.addEventListener('click', () => {
+    // Use the splash art of the currently visible character
+    splashArtImg.src = characters[currentIndex].splashArt;
+    splashArtOverlay.style.display = 'flex';
+});
+
+// Close Splash Art Overlay
+closeSplashArtBtn.addEventListener('click', () => {
+    splashArtOverlay.style.display = 'none';
+});
+
 // Initialize with the first character
 updateCharacter(currentIndex);
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("loaded");
+});

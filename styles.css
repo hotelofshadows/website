@@ -15,7 +15,7 @@
 /* Small Text Styling */
 .character-text-container {
     text-align: center; /* Centers the text */
-    margin-top: 20px; /* Adds spacing above */
+    margin-top: 3px; /* Adds spacing above */
 }
 
 .character-text {
@@ -132,6 +132,66 @@ nav li a:hover::after {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Splash Art Button */
+.view-splashart-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'OSP-DIN', sans-serif;
+    color: white;
+    background-color: #d94583;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-splashart-button:hover {
+    background-color: #812e50;
+}
+
+/* Splash Art Overlay */
+.splashart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Splash Art Image */
+.splashart-img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Close Button for Splash Art */
+.close-splashart-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: auto; /* Let the button size adapt to the text */
+    height: auto; /* Let the button size adapt to the text */
+    padding: 0; /* Remove extra padding */
+    font-size: 1.5rem; /* Adjust font size for the "X" */
+    font-family: 'OSP-DIN', sans-serif;
+    color: white; /* Ensure the "X" is visible */
+    background: none; /* Remove background color */
+    border: none; /* Remove border */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add a hover animation */
+}
+
+.close-splashart-button:hover {
+    transform: scale(1.2); /* Scale the "X" slightly on hover */
+}
+
 /* Character Content (Container) */
 .character-content {
     position: relative;
@@ -181,7 +241,7 @@ nav li a:hover::after {
     z-index: 0; /* Furthest back */
 }
 
-/* Character Image Behind Template */
+/* Default State Before Page Loads */
 .character-img {
     position: absolute;
     top: 0;
@@ -189,9 +249,13 @@ nav li a:hover::after {
     width: 100%;
     height: 100%;
     object-fit: contain; /* Character fits properly */
-    z-index: 1; /* Above the gradient */
-    opacity: 1; /* Visible by default */
+    opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* After Page Loads */
+body.loaded .character-img {
+    opacity: 1; /* Visible after loading */
 }
 
 /* Template Image */
