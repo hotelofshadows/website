@@ -41,6 +41,16 @@ const characters = [
         splashArt: "images/splashArts/9.png" 
     },
     { 
+        img: "images/character10.png", 
+        descriptionImg: "images/description10.png", 
+        splashArt: "images/splashArts/10.png" 
+    },
+    { 
+        img: "images/character11.png", 
+        descriptionImg: "images/description11.png", 
+        splashArt: "images/splashArts/11.png" 
+    },
+    { 
         img: "images/character_placeholder.png", 
         descriptionImg: "images/description_placeholder.png", 
         splashArt: "images/splashArts/placeholder_splash.png" 
