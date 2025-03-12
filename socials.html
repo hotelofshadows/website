@@ -4,48 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danganronpa: Hotel of Shadows</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./images/favicon.png" type="image/png">
 
     <meta property="og:description" content="Official website for Danganronpa: Hotel of Shadows! Check out the characters and read more about the project!" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Danganronpa: Hotel of Shadows" />
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            height: 100vh;
+        }
+        .text {
+            max-width: 400px;
+            font-size: 1.6rem;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        .image {
+            max-width: 200px;
+        }
+        audio {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Background -->
     <div class="background"></div>
 
-    <!-- Logo -->
-    <header>
-        <img src="./images/logo.png" alt="Danganronpa Logo" class="logo">
-    </header>
+    <!-- Invisible Music Player -->
+    <audio src="audio/AfterHours.mp3" autoplay loop></audio>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index">Home</a></li>
-            <li><a href="./characters">Characters</a></li>
-            <li><a href="#">Socials</a></li>
-        </ul>
-    </nav>
-
-    <!-- Socials Section -->
-<div class="socials-container">
-    <h2 class="socials-title">Socials</h2>
-    <div class="social-icons">
-        <a href="https://discord.gg/s7PdzRKqt7" target="_blank">
-            <img src="./images/discord.svg" alt="Discord">
-        </a>
-        <a href="https://x.com/hotelofshadow" target="_blank">
-            <img src="./images/twitter.svg" alt="Twitter">
-        </a>
+    <!-- Content Section -->
+    <div class="content">
+        <div class="text">
+            <p>The website is currently under construction, please visit later!</p>
+        </div>
+        <img src="images/rei_Chibi.png" alt="Rei Chibi" class="image">
     </div>
-    <h3 class="socials-title">Other Links</h3>
-    <div class="other-links">
-        <a href="./images/PredictionSheet.png" target="_blank">Prediction Sheet</a>
-        <a href="https://tiermaker.com/create/danganronpa-hotel-of-shadows-characters-17670531" target="_blank">Tierlist</a>
-        <a href="https://hotelofshadows.straw.page/" target="_blank">Straw Page</a>
-    </div>
-</div>
 </body>
 </html>

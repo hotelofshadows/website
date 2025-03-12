@@ -11,23 +11,53 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Danganronpa: Hotel of Shadows" />
 
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            height: 100vh;
+        }
+        .text {
+            max-width: 400px;
+            font-size: 1.6rem;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        .image {
+            max-width: 200px;
+        }
+        audio {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Background -->
     <div class="background"></div>
 
-    <!-- Logo -->
-    <header>
-        <img src="images/logo.png" alt="Danganronpa Logo" class="logo">
-    </header>
+    <!-- Invisible Music Player -->
+    <audio src="audio/AfterHours.mp3" autoplay loop></audio>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="characters">Characters</a></li>
-            <li><a href="socials">Socials</a></li>
-        </ul>
-    </nav>
+    <!-- Content Section -->
+    <div class="content">
+        <div class="text">
+            <p>The website is currently under construction, please visit later!</p>
+        </div>
+        <img src="images/rei_Chibi.png" alt="Rei Chibi" class="image">
+    </div>
 </body>
 </html>

@@ -4,85 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danganronpa: Hotel of Shadows</title>
-    <link rel="icon" href="https://hotelofshadows.com/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
 
     <meta property="og:description" content="Official website for Danganronpa: Hotel of Shadows! Check out the characters and read more about the project!" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Danganronpa: Hotel of Shadows" />
 
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        @font-face {
-            font-family: 'OSP-DIN';
-            src: url('/fonts/OSP-DIN.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'OSP-DIN', sans-serif;
-            color: white;
+        body, html {
             height: 100%;
-            overflow-x: hidden;
+            margin: 0;
         }
-
-        /* Background Image */
         .background {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('https://hotelofshadows.com/images/bg.png') no-repeat center center;
-            background-size: cover;
+            width: 100%;
+            height: 100%;
             z-index: -1;
         }
-
-        /* Logo */
-        header {
-            text-align: center;
-            margin: 20px 0;
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            height: 100vh;
         }
-
-        .logo {
-            width: 400px;
-            max-width: 100%;
+        .text {
+            max-width: 400px;
+            font-size: 1.6rem;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
-
-        /* Line below the logo */
-        .logo-divider {
-            width: 80%;
-            height: 2px;
-            background-color: #000;
-            margin: 20px auto;
-            border: none;
+        .image {
+            max-width: 200px;
         }
-
-        /* Error message styles */
-        .error-container {
-            text-align: center;
-        }
-
-        .error-title {
-            font-size: 5rem;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .error-message {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-
-        .smiley {
-            font-size: 1rem;
-            margin-top: 10px;
+        audio {
+            display: none;
         }
     </style>
 </head>
@@ -90,18 +49,15 @@
     <!-- Background -->
     <div class="background"></div>
 
-    <!-- Logo -->
-    <header>
-        <img src="https://hotelofshadows.com/images/logo.png" alt="Danganronpa Logo" class="logo">
-        <!-- Line Below the Logo -->
-        <hr class="logo-divider">
-    </header>
+    <!-- Invisible Music Player -->
+    <audio src="audio/AfterHours.mp3" autoplay loop></audio>
 
-    <!-- Centered Content -->
-    <main class="error-container">
-        <h1 class="error-title">404</h1>
-        <p class="error-message">The page you were looking for doesn't exist, or maybe you were looking for an easter egg?</p>
-        <p class="smiley">:)</p>
-    </main>
+    <!-- Content Section -->
+    <div class="content">
+        <div class="text">
+            <p>The website is currently under construction, please visit later!</p>
+        </div>
+        <img src="images/rei_Chibi.png" alt="Rei Chibi" class="image">
+    </div>
 </body>
 </html>
