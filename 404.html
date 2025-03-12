@@ -15,6 +15,9 @@
         body, html {
             height: 100%;
             margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .background {
             position: absolute;
@@ -25,11 +28,13 @@
             z-index: -1;
         }
         .content {
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             gap: 20px;
             height: 100vh;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
         .text {
             max-width: 400px;
@@ -40,6 +45,24 @@
         .image {
             max-width: 200px;
         }
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #801a41;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
         audio {
             display: none;
         }
@@ -49,15 +72,33 @@
     <!-- Background -->
     <div class="background"></div>
 
+    <!-- Play Button -->
+    <div class="play-button" id="playButton">▶</div>
+
     <!-- Invisible Music Player -->
-    <audio src="audio/AfterHours.mp3" autoplay loop></audio>
+    <audio id="bg-music" src="audio/AfterHours.mp3" loop></audio>
 
     <!-- Content Section -->
-    <div class="content">
+    <div class="content" id="contentSection">
         <div class="text">
             <p>The website is currently under construction, please visit later!</p>
         </div>
         <img src="images/rei_Chibi.png" alt="Rei Chibi" class="image">
     </div>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const content = document.getElementById('contentSection');
+        const music = document.getElementById('bg-music');
+
+        playButton.addEventListener('click', () => {
+            music.play();
+            playButton.style.display = 'none';
+            content.style.display = 'flex';
+            setTimeout(() => {
+                content.style.opacity = 1;
+            }, 50);
+        });
+    </script>
 </body>
 </html>
